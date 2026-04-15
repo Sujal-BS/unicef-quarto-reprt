@@ -72,21 +72,6 @@
             color: #555;
             margin: 20px 0 45px 0;
         }
-        .dropdown {
-            margin-top: 50px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-        }
-        details {
-            margin: 15px 0;
-        }
-        summary {
-            font-weight: bold;
-            cursor: pointer;
-            color: #2980b9;
-        }
     </style>
 </head>
 <body>
@@ -102,7 +87,6 @@
             <li><a href="#data-methodology" class="toc-link">4. Data & Methodology</a></li>
             <li><a href="#visual-analysis" class="toc-link">5. Visual Analysis</a></li>
             <li><a href="#recommendations" class="toc-link">6. Recommendations</a></li>
-            <li><a href="#code-used" class="toc-link">7. Code Used</a></li>
         </ul>
     </div>
 
@@ -119,7 +103,7 @@
 
         <div id="why-it-matters">
             <h2>2. Why This Issue Matters</h2>
-            <p>Millions of children still suffer from Vitamin A deficiency, leading to preventable blindness and increased risk of death from infections. Supplementation is a simple and highly cost-effective intervention to improve child survival.</p>
+            <p>Millions of children still suffer from Vitamin A deficiency, leading to preventable blindness and increased risk of death from infections. Supplementation is a simple and highly cost-effective intervention to protect child health.</p>
         </div>
 
         <div id="key-findings">
@@ -164,18 +148,6 @@
                 <li>Provide targeted funding to low-coverage countries.</li>
             </ul>
             <p>Every percentage point increase in coverage can save thousands of young lives.</p>
-        </div>
-
-        <div id="code-used" class="dropdown">
-            <h2>7. Code Used in This Report</h2>
-            <details>
-                <summary>Data Processing</summary>
-                <p>The data was loaded and processed using the <strong>Polars</strong> library in Python. This included merging UNICEF indicator files with World Bank metadata, filtering for relevant years and total sex, and calculating averages.</p>
-            </details>
-            <details>
-                <summary>Visualisations</summary>
-                <p>All four visualisations (World Map, Bar Chart, Scatterplot with regression line, and Time-Series) were created using the <strong>plotnine</strong> package in Python.</p>
-            </details>
         </div>
     </div>
 </div>
