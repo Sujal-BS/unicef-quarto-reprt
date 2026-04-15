@@ -8,7 +8,7 @@
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             line-height: 1.8;
-            max-width: 1100px;
+            max-width: 1150px;
             margin: 40px auto;
             padding: 20px;
             color: #333;
@@ -17,24 +17,26 @@
         h1 {
             color: #2c3e50;
             text-align: center;
-            border-bottom: 3px solid #3498db;
-            padding-bottom: 15px;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 20px;
         }
         h2 {
             color: #2c3e50;
-            border-left: 6px solid #3498db;
-            padding-left: 15px;
+            border-left: 8px solid #3498db;
+            padding-left: 18px;
+            margin-top: 40px;
         }
         h3 {
             color: #2980b9;
+            margin-top: 30px;
         }
         img {
             max-width: 100%;
             height: auto;
-            border: 2px solid #ddd;
-            border-radius: 10px;
-            margin: 20px 0;
-            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+            border: 3px solid #ecf0f1;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12);
         }
         .highlight { 
             color: #e74c3c; 
@@ -42,75 +44,87 @@
         }
         .section {
             background: white;
-            padding: 30px;
-            margin-bottom: 35px;
+            padding: 32px;
+            margin-bottom: 40px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
         .author {
             text-align: center;
-            font-size: 1.1em;
+            font-size: 1.15em;
             color: #555;
-            margin-bottom: 30px;
+            margin: 20px 0 40px 0;
         }
         ul {
             padding-left: 25px;
+            line-height: 2;
+        }
+        .note {
+            font-size: 0.95em;
+            color: #666;
+            font-style: italic;
+            margin-top: 40px;
+            border-top: 1px solid #ddd;
+            padding-top: 15px;
         }
     </style>
 </head>
 <body>
 
 <h1>Vitamin A Supplementation: Saving Children's Lives Worldwide</h1>
-<p class="author"><strong>Sujal Boodgere Sunil - A00096721</strong> | UNICEF Data Analyst Report</p>
+<p class="author"><strong>Sujal Boodgere Sunil - A00096721</strong> | BAA1030 - UNICEF Data Analyst Report</p>
 
 <div class="section">
     <h2>Executive Summary</h2>
-    <p>Vitamin A deficiency is a major preventable cause of childhood blindness and mortality, particularly in developing countries. Routine Vitamin A supplementation for children aged 6–59 months has proven to reduce under-five mortality by up to <span class="highlight">23%</span>.</p>
-    <p>This report analyses global coverage trends using UNICEF data, examines its relationship with economic indicators and child mortality (ages 5–9), and highlights areas where urgent action is needed.</p>
+    <p>Vitamin A deficiency is one of the leading preventable causes of childhood blindness and mortality in developing countries. Routine supplementation for children aged 6–59 months has been proven to reduce under-five mortality by up to <span class="highlight">23%</span>.</p>
+    <p>This report analyses global Vitamin A supplementation coverage (Semester 1) using UNICEF Indicator 1 and 2 datasets merged with World Bank metadata. It explores trends, economic correlations, and child mortality (ages 5–9) to raise awareness and support evidence-based action.</p>
 </div>
 
 <div class="section">
-    <h2>Key Findings</h2>
+    <h2>Key Findings & Insights</h2>
     <ul>
-        <li>While global average coverage has improved since 2000, large disparities persist between countries and regions.</li>
-        <li>Higher GDP per capita shows a strong positive correlation with better Vitamin A supplementation coverage.</li>
-        <li>Several countries still have coverage rates below 10%, leaving millions of children vulnerable.</li>
-        <li>The COVID-19 pandemic caused significant disruptions to supplementation campaigns in 2020.</li>
-        <li>Countries with low coverage often experience higher child mortality rates in the 5–9 age group.</li>
+        <li>Global average coverage has shown long-term improvement since 2000, yet major regional disparities remain.</li>
+        <li>Higher GDP per capita is strongly positively correlated with better supplementation coverage (clear linear trend observed).</li>
+        <li>Several countries still have coverage rates below 10%, exposing millions of children to preventable risks.</li>
+        <li>A noticeable dip in coverage occurred in 2020 due to COVID-19 disruptions in health services.</li>
+        <li>Countries with persistently low coverage tend to show higher child mortality rates in the 5–9 age group.</li>
     </ul>
 </div>
 
 <div class="section">
     <h2>Visual Analysis</h2>
 
-    <h3>1. World Map: Vitamin A Supplementation Coverage (Semester 1, 2023)</h3>
+    <h3>1. World Map: Vitamin A Supplementation Coverage (2023)</h3>
     <img src="world_map.png" alt="World Map - Vitamin A Coverage 2023">
-    <p>High coverage is observed in East Asia, Latin America, and parts of South Asia. Many countries in sub-Saharan Africa and conflict zones still show critically low coverage.</p>
+    <p>This choropleth map highlights strong performance in East Asia, Latin America, and parts of South Asia, while many countries in sub-Saharan Africa and conflict-affected areas continue to show critically low coverage.</p>
 
-    <h3>2. Bar Chart: 10 Countries with Lowest Coverage in 2023</h3>
+    <h3>2. Bar Chart: 10 Countries with the Lowest Coverage in 2023</h3>
     <img src="bar_chart.png" alt="10 Countries with Lowest Vitamin A Coverage">
-    <p>These nations require immediate strengthening of supplementation programmes to protect young children from preventable health risks.</p>
+    <p>These nations require urgent intervention to strengthen supplementation programmes and protect vulnerable children.</p>
 
-    <h3>3. Scatterplot with Linear Regression: GDP per Capita vs Coverage</h3>
-    <img src="scatter_plot.png" alt="GDP vs Vitamin A Coverage">
-    <p>The upward trend confirms that economic development is closely linked to higher supplementation coverage rates.</p>
+    <h3>3. Scatterplot with Linear Regression: GDP per Capita vs Vitamin A Coverage</h3>
+    <img src="scatter_plot.png" alt="GDP per Capita vs Coverage">
+    <p>The clear upward regression line confirms a strong positive relationship between economic development and successful implementation of Vitamin A programmes.</p>
 
-    <h3>4. Time-Series: Global Average Coverage Trend (2000–2023)</h3>
+    <h3>4. Time-Series Chart: Global Average Coverage Trend (2000–2023)</h3>
     <img src="time_series.png" alt="Global Average Vitamin A Coverage Trend">
-    <p>Long-term progress is evident, but the noticeable dip in 2020 reflects the impact of the COVID-19 pandemic on health service delivery.</p>
+    <p>Steady long-term progress is visible, but the sharp dip around 2020 demonstrates how external shocks can reverse years of gains in child health interventions.</p>
 </div>
 
 <div class="section">
-    <h2>Recommendations & Call to Action</h2>
-    <p>UNICEF, governments, and international partners should focus on:</p>
+    <h2>Recommendations</h2>
+    <p>To accelerate progress, UNICEF and national governments should prioritise:</p>
     <ul>
-        <li>Improving logistics and supply chain reliability in low-coverage countries.</li>
-        <li>Integrating Vitamin A supplementation with routine immunisation and maternal health programmes.</li>
-        <li>Enhancing community awareness and monitoring systems to ensure consistent delivery.</li>
-        <li>Increasing targeted funding for countries with coverage below 50%.</li>
+        <li>Strengthening cold-chain logistics and supply reliability in low-coverage countries.</li>
+        <li>Integrating Vitamin A supplementation with routine immunisation and nutrition programmes.</li>
+        <li>Enhancing real-time monitoring and community engagement to improve delivery rates.</li>
+        <li>Targeted funding and technical support for countries with coverage below 50%.</li>
     </ul>
-    <p>Every percentage point increase in coverage can save thousands of young lives each year.</p>
-    <p><strong>Data Sources:</strong> UNICEF Indicator 1 & 2, World Bank Metadata</p>
+    <p>Every additional percentage point in coverage can save thousands of young lives every year.</p>
+</div>
+
+<div class="note">
+    <strong>Technical Note:</strong> Visualisations were created using the plotnine package in Python. Data was loaded and transformed using Polars (filtering, joining indicator files with metadata, grouping, and summarising). The full Quarto .qmd file containing all code cells is available in this repository for reference.
 </div>
 
 </body>
