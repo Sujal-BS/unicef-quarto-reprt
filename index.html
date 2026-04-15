@@ -20,20 +20,22 @@
             gap: 40px;
             padding: 0 20px;
         }
-        /* Sticky Table of Contents */
+        /* Smaller Sticky TOC */
         .toc {
             position: sticky;
             top: 40px;
             align-self: flex-start;
-            width: 280px;
+            width: 240px;
             background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            font-size: 0.95em;
             height: fit-content;
         }
         .toc h2 {
             margin-top: 0;
+            font-size: 1.25em;
             color: #2c3e50;
         }
         .toc ul {
@@ -42,7 +44,7 @@
             margin: 0;
         }
         .toc li {
-            margin: 12px 0;
+            margin: 10px 0;
         }
         .toc a {
             text-decoration: none;
@@ -52,7 +54,7 @@
         .toc a:hover,
         .toc a.active {
             color: #3498db;
-            font-weight: bold;
+            font-weight: 600;
         }
         /* Main Content */
         .content {
@@ -71,8 +73,12 @@
         h2 {
             color: #2c3e50;
             border-left: 6px solid #3498db;
-            padding-left: 15px;
+            padding-left: 16px;
             margin-top: 45px;
+        }
+        h3 {
+            color: #2980b9;
+            margin-top: 30px;
         }
         img {
             max-width: 100%;
@@ -90,7 +96,7 @@
             text-align: center;
             font-size: 1.15em;
             color: #555;
-            margin: 20px 0 40px 0;
+            margin: 20px 0 45px 0;
         }
     </style>
 </head>
@@ -117,63 +123,67 @@
 
         <div id="executive-summary">
             <h2>1. Executive Summary</h2>
-            <p>Vitamin A deficiency is one of the leading preventable causes of childhood blindness and mortality. Simple twice-yearly supplementation can reduce child mortality by up to <span class="highlight">23%</span> in children aged 6–59 months.</p>
-            <p>This report analyses global coverage using UNICEF data and highlights where urgent action is needed.</p>
+            <p>Vitamin A is an essential micronutrient required for healthy vision, strong immune function, and proper growth in children. Deficiency remains a significant public health challenge in many low- and middle-income countries, contributing to preventable blindness and increased mortality from common childhood infections.</p>
+            <p>Routine Vitamin A supplementation has been proven to reduce under-five mortality by up to <span class="highlight">23%</span>. This report examines global coverage trends, economic correlations, and links to child mortality using the latest UNICEF data, with the goal of raising awareness and supporting targeted interventions.</p>
         </div>
 
         <div id="why-it-matters">
             <h2>2. Why This Issue Matters</h2>
-            <p>Every year, hundreds of thousands of children suffer or die due to Vitamin A deficiency. Supplementation is a highly cost-effective way to protect them. Understanding current coverage helps UNICEF and governments take better action.</p>
+            <p>Despite global progress, Vitamin A deficiency continues to affect millions of children, particularly in regions with limited access to diverse diets. The consequences include irreversible blindness, weakened immunity, and higher vulnerability to diseases such as measles and diarrhoea. Effective supplementation programmes offer one of the most cost-effective ways to protect child health and support long-term development.</p>
         </div>
 
         <div id="key-findings">
             <h2>3. Key Findings</h2>
             <ul>
-                <li>Global coverage has improved since 2000, but large regional gaps remain.</li>
-                <li>Higher GDP per capita strongly correlates with better supplementation rates.</li>
-                <li>Several countries still have coverage below 10%.</li>
-                <li>Coverage dropped noticeably in 2020 due to COVID-19.</li>
-                <li>Low coverage is often linked to higher child mortality (ages 5–9).</li>
+                <li>Global average coverage has shown steady improvement since 2000, yet substantial regional disparities persist.</li>
+                <li>A strong positive correlation exists between GDP per capita and Vitamin A supplementation coverage.</li>
+                <li>Several countries continue to report coverage rates below 10%, placing large numbers of children at serious risk.</li>
+                <li>A noticeable decline in coverage occurred in 2020, largely attributable to disruptions caused by the COVID-19 pandemic.</li>
+                <li>Countries with persistently low supplementation rates tend to experience higher child mortality in the 5–9 age group.</li>
             </ul>
         </div>
 
         <div id="data-methodology">
             <h2>4. Data & Methodology</h2>
-            <p>Data from UNICEF Indicator 1 (Vitamin A coverage) and Indicator 2 (child mortality) were merged with World Bank metadata using Polars. All visualisations were created with plotnine in Python.</p>
+            <p>This analysis combines UNICEF Indicator 1 (Vitamin A Supplementation Coverage) and Indicator 2 (Mortality rate age 5–9) with World Bank metadata. Data processing—including cleaning, filtering, joining datasets, and summarisation—was performed using the Polars library in Python for efficiency and reproducibility. All visualisations were generated using the plotnine package.</p>
         </div>
 
         <div id="visual-analysis">
             <h2>5. Visual Analysis</h2>
 
-            <h3>World Map – Vitamin A Coverage (2023)</h3>
-            <img src="world_map.png" alt="World Map">
+            <h3>World Map – Vitamin A Supplementation Coverage (2023)</h3>
+            <img src="world_map.png" alt="World Map of Vitamin A Coverage 2023">
+            <p>The map reveals strong performance in East Asia, Latin America, and parts of South Asia, while highlighting critical gaps in many sub-Saharan African and conflict-affected countries.</p>
 
-            <h3>Bar Chart – 10 Countries with Lowest Coverage (2023)</h3>
-            <img src="bar_chart.png" alt="Bar Chart">
+            <h3>Bar Chart – 10 Countries with the Lowest Coverage in 2023</h3>
+            <img src="bar_chart.png" alt="10 Countries with Lowest Vitamin A Coverage">
+            <p>These nations face the most pressing challenges and require immediate strengthening of supplementation programmes.</p>
 
-            <h3>Scatterplot with Linear Regression – GDP vs Coverage</h3>
-            <img src="scatter_plot.png" alt="Scatterplot">
+            <h3>Scatterplot with Linear Regression – GDP per Capita vs Coverage</h3>
+            <img src="scatter_plot.png" alt="GDP per Capita vs Vitamin A Coverage">
+            <p>The positive regression line clearly demonstrates that economic development is closely associated with higher supplementation coverage rates.</p>
 
-            <h3>Time-Series – Global Average Coverage Trend (2000–2023)</h3>
-            <img src="time_series.png" alt="Time Series">
+            <h3>Time-Series Chart – Global Average Coverage Trend (2000–2023)</h3>
+            <img src="time_series.png" alt="Global Average Vitamin A Coverage Trend">
+            <p>Long-term upward progress is evident; however, the sharp dip around 2020 underscores the vulnerability of health programmes to global disruptions.</p>
         </div>
 
         <div id="recommendations">
             <h2>6. Recommendations & Call to Action</h2>
-            <p>To improve child survival, we recommend:</p>
+            <p>To accelerate progress and protect more children, the following actions are recommended:</p>
             <ul>
-                <li>Strengthening supply chains for reliable delivery.</li>
-                <li>Integrating supplementation with routine immunisation.</li>
-                <li>Running community awareness campaigns.</li>
-                <li>Providing extra support to low-coverage countries.</li>
+                <li>Strengthen supply chain logistics to ensure reliable and timely delivery of supplements, even in remote areas.</li>
+                <li>Integrate Vitamin A supplementation with routine immunisation and maternal-child health programmes.</li>
+                <li>Implement community-based awareness campaigns to improve parental understanding and uptake.</li>
+                <li>Provide targeted technical and financial support to countries with coverage rates below 50%.</li>
             </ul>
-            <p>Every percentage point increase in coverage can save thousands of young lives.</p>
+            <p>Even small improvements in coverage can result in substantial reductions in preventable child mortality and blindness.</p>
         </div>
     </div>
 </div>
 
 <script>
-    // Highlight active TOC link while scrolling
+    // Auto-highlight TOC as user scrolls
     window.addEventListener('scroll', () => {
         let current = '';
         const sections = document.querySelectorAll('.content > div[id]');
@@ -181,7 +191,7 @@
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
-            if (scrollY >= sectionTop - 100) {
+            if (scrollY >= sectionTop - 150) {
                 current = section.getAttribute('id');
             }
         });
