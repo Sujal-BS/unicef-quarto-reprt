@@ -48,32 +48,107 @@
             border-radius: 12px;
             box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
+        .toc {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        .toc ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .toc a {
+            text-decoration: none;
+            color: #2980b9;
+        }
+        .toc a:hover {
+            text-decoration: underline;
+        }
         .author {
             text-align: center;
             font-size: 1.15em;
             color: #555;
             margin: 25px 0 45px 0;
         }
-        .redirect-note {
-            background: #fff3cd;
-            padding: 15px;
-            border-left: 6px solid #f39c12;
-            margin-bottom: 30px;
-            border-radius: 6px;
-        }
     </style>
 </head>
 <body>
 
-<div class="redirect-note">
-    <strong>Note:</strong> This is the main report page. All visualisations and analysis are presented below. 
-    (If you add more pages later, this can automatically redirect.)
-</div>
-
 <h1>Vitamin A Supplementation: Saving Children's Lives Worldwide</h1>
 <p class="author"><strong>Sujal Boodgere Sunil - A00096721</strong> | BAA1030 UNICEF Data Analyst Report</p>
 
-<div class="section">
-    <h2>Executive Summary</h2>
-    <p>Vitamin A is essential for good vision, strong immunity, and healthy growth in young children. Lack of Vitamin A (deficiency) is a serious but preventable problem, especially in developing countries. It can cause blindness and makes children more likely to die from common illnesses like measles and diarrhoea.</p>
-    <p>Simple Vitamin A
+<div class="toc">
+    <h2>Table of Contents</h2>
+    <ul>
+        <li><a href="#executive-summary">1. Executive Summary</a></li>
+        <li><a href="#why-it-matters">2. Why This Issue Matters</a></li>
+        <li><a href="#key-findings">3. Key Findings</a></li>
+        <li><a href="#data-methodology">4. Data & Methodology</a></li>
+        <li><a href="#visual-analysis">5. Visual Analysis</a></li>
+        <li><a href="#recommendations">6. Recommendations & Call to Action</a></li>
+    </ul>
+</div>
+
+<div class="section" id="executive-summary">
+    <h2>1. Executive Summary</h2>
+    <p>Vitamin A deficiency is a major yet preventable threat to child health worldwide. It causes blindness and weakens immunity, making children more vulnerable to infections. Simple twice-yearly Vitamin A supplements can reduce child mortality by up to <span class="highlight">23%</span> in children aged 6–59 months.</p>
+    <p>This report analyses global supplementation coverage using UNICEF data, explores its links with economic factors and child mortality, and provides clear recommendations to improve outcomes.</p>
+</div>
+
+<div class="section" id="why-it-matters">
+    <h2>2. Why This Issue Matters</h2>
+    <p>Every year, hundreds of thousands of children suffer or die from Vitamin A deficiency. Supplementation is one of the most cost-effective public health interventions available. By raising awareness and understanding current coverage gaps, we can support UNICEF and governments to reach every child who needs protection.</p>
+</div>
+
+<div class="section" id="key-findings">
+    <h2>3. Key Findings</h2>
+    <ul>
+        <li>Global coverage has improved since 2000, but large disparities remain between regions.</li>
+        <li>Higher GDP per capita is strongly associated with better supplementation rates.</li>
+        <li>Several countries still have coverage below 10%, leaving millions of children at risk.</li>
+        <li>Coverage dropped noticeably in 2020 due to COVID-19 disruptions.</li>
+        <li>Low coverage often correlates with higher child mortality in the 5–9 age group.</li>
+    </ul>
+</div>
+
+<div class="section" id="data-methodology">
+    <h2>4. Data & Methodology</h2>
+    <p>Data from UNICEF Indicator 1 (Vitamin A coverage) and Indicator 2 (child mortality 5–9) were merged with World Bank metadata (GDP per capita, etc.) using the Polars library in Python. Cleaning, filtering, grouping, and summarising were performed efficiently. All visualisations were created with the plotnine package for clear, reproducible results.</p>
+</div>
+
+<div class="section" id="visual-analysis">
+    <h2>5. Visual Analysis</h2>
+
+    <h3>5.1 World Map – Vitamin A Coverage (2023)</h3>
+    <img src="world_map.png" alt="World Map of Vitamin A Supplementation Coverage 2023">
+    <p>High coverage is seen in East Asia, Latin America, and parts of South Asia. Many countries in sub-Saharan Africa and conflict zones show low coverage.</p>
+
+    <h3>5.2 Bar Chart – 10 Countries with Lowest Coverage (2023)</h3>
+    <img src="bar_chart.png" alt="10 Countries with Lowest Vitamin A Coverage">
+    <p>These countries need urgent support to protect their children.</p>
+
+    <h3>5.3 Scatterplot with Linear Regression – GDP vs Coverage</h3>
+    <img src="scatter_plot.png" alt="GDP per Capita vs Vitamin A Coverage">
+    <p>The upward trend line confirms that economic development supports better programme delivery.</p>
+
+    <h3>5.4 Time-Series – Global Average Coverage Trend (2000–2023)</h3>
+    <img src="time_series.png" alt="Global Average Vitamin A Coverage Trend">
+    <p>Long-term progress is visible, but the 2020 dip highlights vulnerability to global disruptions.</p>
+</div>
+
+<div class="section" id="recommendations">
+    <h2>6. Recommendations & Call to Action</h2>
+    <p>To save more lives, the following actions are recommended:</p>
+    <ul>
+        <li>Strengthen supply chains and logistics for reliable delivery.</li>
+        <li>Integrate supplementation with routine immunisation and nutrition services.</li>
+        <li>Run community awareness campaigns to increase uptake.</li>
+        <li>Provide targeted funding and technical support to low-coverage countries.</li>
+    </ul>
+    <p>Every percentage point increase in coverage can prevent thousands of child deaths annually.</p>
+</div>
+
+</body>
+</html>
